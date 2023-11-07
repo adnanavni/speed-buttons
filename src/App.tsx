@@ -125,13 +125,22 @@ function App() {
                 <StyledRoundDiv
                   key={index}
                   onClick={() => handleClick(color)}
-                  style={{ backgroundColor: color }}
+                  style={{
+                    backgroundColor: color,
+                    boxShadow: `0 0 1rem ${COLORS[index]}`,
+                  }}
                 >
                   <p>{KEYS[index].toUpperCase()}</p>
                 </StyledRoundDiv>
               ))
             : COLORS.map((color, index) => (
-                <StyledRoundDiv key={index} style={{ backgroundColor: color }}>
+                <StyledRoundDiv
+                  key={index}
+                  style={{
+                    backgroundColor: color,
+                    boxShadow: `0 0 1rem ${color}`,
+                  }}
+                >
                   <p>{KEYS[index].toUpperCase()}</p>
                 </StyledRoundDiv>
               ))}

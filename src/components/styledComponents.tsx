@@ -23,6 +23,7 @@ export const StyledGameWrapper = styled.div`
 export const StyledButtonsWrapper = styled.div`
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: 0.5rem;
   margin: 1rem;
 `;
@@ -40,12 +41,15 @@ export const StyledRoundDiv = styled.div`
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  border: 2px solid black;
   width: 10rem;
   height: 10rem;
   cursor: pointer;
   &:hover {
     box-shadow: 0 0 20px 0 rgb(0, 0, 0);
+  }
+  @media (max-width: 768px) {
+    width: 5rem;
+    height: 5rem;
   }
 `;
 
