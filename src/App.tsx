@@ -52,7 +52,9 @@ function App() {
       newVisibleColors[indexofColor] = "transparent";
       setVisibleColors(newVisibleColors);
       setQueue((queue) => queue.slice(1));
-      setPoints((points) => points + 1);
+
+      if (gameRef.current) setPoints((points) => points + 1);
+
       INTERVAL -= 50;
     }
   };
@@ -146,7 +148,9 @@ function App() {
               ))}
         </StyledButtonsWrapper>
         <StyledButtonsWrapper>
-          <StyledButton onClick={handleStart}>Start</StyledButton>
+          <StyledButton onClick={handleStart} disabled={!gameOver}>
+            Start
+          </StyledButton>
           <StyledButton onClick={handleStop}>Stop</StyledButton>
         </StyledButtonsWrapper>
       </StyledGameWrapper>
