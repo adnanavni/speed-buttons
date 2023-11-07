@@ -148,9 +148,7 @@ function App() {
               ))}
         </StyledButtonsWrapper>
         <StyledButtonsWrapper>
-          <StyledButton onClick={handleStart} disabled={!gameOver}>
-            Start
-          </StyledButton>
+          <StyledButton onClick={handleStart}>Start</StyledButton>
           <StyledButton onClick={handleStop}>Stop</StyledButton>
         </StyledButtonsWrapper>
       </StyledGameWrapper>
